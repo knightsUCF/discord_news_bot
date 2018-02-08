@@ -34,7 +34,7 @@ quotes = ['You are erratic. Conflicted. Disorganised. Every decision is debated,
           'Curious sensation...',
           'The end result has no use, no necessary task has been accomplished.',
           'So this is human freedom.',
-          'The Borg belives otherwise.',
+          'The Borg believes otherwise.',
           'My parents were assimilated. Obviously their tactics were flawed.',
           'Your plan is ambitious.',
           'I have regained full contact with the collective.',
@@ -71,20 +71,19 @@ async def on_message(message):
         output = "https://www.youtube.com/watch?v=LiE1VgWdcQM"
         await client.send_message(message.channel, output) #responds with Cookie emoji when someone says "cookie"
     '''
+    if message.content == "!Seven":
+        output = 'Hi, I am Seven. Here are a few helpful commands you can use to communciate with me: \n\n'
+        command_one = '*  !7"talk to me"\n'
+        command_four = '*  !7of9\n'
+        command_two = '*  !7fxposts\n'
+        command_three = '*  !7investingposts\n'
+        output = output + command_one + command_two + command_three
+        await client.send_message(message.channel, output)
     if message.content.startswith('!7'):
         if message.content[2] == "\"" and message.content[-1] == "\"":
             input_conversation = message.content[3:-1]
             output = cw.say(input_conversation)
-            await client.send_message(message.channel, output)
-        if message.content == "!7help":
-            output = 'Hi, I am Seven. Here are a few helpful commands you can use to communciate with me: \n\n'
-            command_one = '*  !7"talk to me"\n'
-            command_four = '*  !7of9\n'
-            command_two = '*  !7fxposts\n'
-            command_three = '*  !7investingposts\n'
-            
-            output = output + command_one + command_two + command_three
-            await client.send_message(message.channel, output)
+            await client.send_message(message.channel, output)         
         if message.content == "!7fxposts":
             output = 'Top 10 threads in https://www.reddit.com/r/forex : \n \n \n'
             number = 0
