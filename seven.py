@@ -78,9 +78,11 @@ async def on_message(message):
             await client.send_message(message.channel, output)
         if message.content == "!7help":
             output = 'Hi, I am Seven. Here are a few helpful commands you can use to communciate with me: \n\n'
-            command_one = '*  !7"Talk to me"\n'
+            command_one = '*  !7"talk to me"\n'
+            command_four = '*  !7of9\n'
             command_two = '*  !7fxposts\n'
             command_three = '*  !7investingposts\n'
+            
             output = output + command_one + command_two + command_three
             await client.send_message(message.channel, output)
         if message.content == "!7fxposts":
@@ -97,9 +99,9 @@ async def on_message(message):
                 number += 1
                 output += (str(number) + '.' + ' ' + submission.title + '\n\n')
             await client.send_message(message.channel, output)
-        if message.content == "!7":
-            output = str(random.choice(quotes))
-            await client.send_message(message.channel, output)
+    if message.content == "!7of9":
+        output = str(random.choice(quotes))
+        await client.send_message(message.channel, output)
 
 
 
