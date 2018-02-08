@@ -9,7 +9,8 @@ from cleverwrap import CleverWrap
 
 cw = CleverWrap("CC74d-BTvojAsdOPDst7CX3tkiA")
 
-real = "NDEwOTI3OTM4NDA2NzExMjk4.DV0SXQ.jg3aNg_yTIEJ2JCP7l7xDfriytU"
+# real = "NDEwOTI3OTM4NDA2NzExMjk4.DV0SXQ.jg3aNg_yTIEJ2JCP7l7xDfriytU" # ed
+real = 'NDExMjI3MDY5NzAwMTEyMzg0.DV4osw.4_6b8H88WEKFPMpTc52VHvVuKXw'
 custom = "NDEwODY4NzAxOTM2NjE1NDQ0.DV0Wvg.bAamLwj3g8SzSuHrN0NCZjNuLy8"
 
 Client = discord.Client() #Initialise Client 
@@ -39,7 +40,6 @@ quotes = ['You are erratic. Conflicted. Disorganised. Every decision is debated,
           'Your plan is ambitious.',
           'I have regained full contact with the collective.',
           'Your appeal to my humanity is pointless',
-          'I am not overwhelmed. I simply do not wish to live among humans.',
           'I will survive -- on what, Borg perfection -- precisely.',
           'I wish to play again.',
           'Impossible is a word humans use far too often',
@@ -72,11 +72,11 @@ async def on_message(message):
         await client.send_message(message.channel, output) #responds with Cookie emoji when someone says "cookie"
     '''
     if message.content == "!Seven":
-        output = 'Hi, I am Seven. Here are a few helpful commands you can use to communciate with me: \n\n'
-        command_one = '*  !7"talk to me"\n'
-        command_four = '*  !7of9\n'
-        command_two = '*  !7fxposts\n'
-        command_three = '*  !7investingposts\n'
+        output = 'Hi, I am Seven. Here are a few helpful commands you can use to communicate with me: \n\n'
+        command_one = '  !7"anything you want to ask" -- chat \n'
+        command_four = '  !7of9 -- We are Borg\n'
+        command_two = '  !7fxposts -- get the top ten posts from reddit / forex\n'
+        command_three = '  !7investingposts -- get the top ten posts from reddit / forex\n'
         output = output + command_one + command_two + command_three
         await client.send_message(message.channel, output)
     if message.content.startswith('!7'):
